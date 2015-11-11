@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03.11.2015, 23:52:36
+    Author     : egor
+*/
+
+body {font-family: Verdana;}
+                .node {
+                    border: solid 1px white;
+                    font: 10px sans-serif;
+                    line-height: 12px;
+                    overflow: hidden;
+                    position: absolute;
+                    text-indent: 2px;
+                }
+                .c3-line, .c3-focused {stroke-width: 3px !important;}
+                .c3-bar {stroke: white !important; stroke-width: 1;}
+                .c3 text { font-size: 12px; color: grey;}
+                .tick line {stroke: white;}
+                .c3-axis path {stroke: grey;}
+                .c3-circle { opacity: 1 !important; }
+                .select2-container--default .select2-selection--single {
+                    background-color: rgb(144, 30, 86);
+                    border: 1px solid rgba(255, 255, 255, 0);
+                    border-radius: 2px;
+
+                }
+
+                .select2-container--default .select2-selection--single .select2-selection__rendered {
+                    color: rgb(255, 252, 252);
+                    line-height: 28px;
+                }
+
+                .select2-container--default .select2-selection--single .select2-selection__arrow b {
+                    border-color: #FFF transparent transparent;
+                }
+
+                .select2-container .select2-selection--single {
+                    height: 32px;
+                }
+
+                .pvtAttr {
+                    background-color: #1E7490 !important;
+                    padding: 4px 5px !important;
+                    color: white !important;
+                }
+
+              
+
+                .pvtAxisLabel, .pvtTotalLabel {
+                    background-color: rgb(144, 30, 86) !important;
+                    color: white !important;
+                }
+
+                .pvtAxisContainer, .pvtVals {
+                    border: 1px solid #D7ACC1 !important;
+                }
+
+                select {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    margin-bottom: 0px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.42857;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    -moz-user-select: none;
+                    background-image: none;
+                    border: 1px solid transparent;
+                    color: #FFF;
+                    background-color: #901E56;
+                    border-color: #FFF;
+                    border-radius: 2px;
+                }
+
+                select:hover, select:active {
+                    color: #FFF;
+                    background-color: #530D2F;
+                    border-color: #FFF;
+                }     
