@@ -1,0 +1,12 @@
+/apiSpec.js
+/browser-runner.js
+/callbacksSpec.js
+/draggingSpec.js
+/eventsSpec.js
+/helpers.js
+/matchers.js
+/optionsSpec.js
+/phantomjs-setup.js
+/resizingSpec.js
+/setup.js
+/touchDraggingSpec.js

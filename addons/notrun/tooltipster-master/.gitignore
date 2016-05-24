@@ -1,1 +1,6 @@
 .DS_Store
+/.gitignore
+/README.md
+/bower.json
+/index.html
+/tooltipster.jquery.json

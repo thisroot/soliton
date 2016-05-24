@@ -1,0 +1,5 @@
+/requirejs-config.js
+/tests-jsrender-amd-scriptloader.js
+/tests-jsrender-no-jquery.js
+/tests-jsrender-with-jquery.js
+/tests-node.js

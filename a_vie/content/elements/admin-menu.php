@@ -11,7 +11,7 @@
             
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="question-block hvr hvr-bounce-in" id="report"> 
-                    <a href="https://www.nebesa.me/main/a_vie/content/adminpages/report.php#">
+                    <a href="https://nebesa.me/main/a_vie/content/adminpages/report.php#">
                         <div class="col-md-12"><span class="flaticon flaticon-data-analytics"></span></div>
                         <div class="col-md-12 text-lowercase"><h5>Конструктор <br> запросов <br>ЖКХ</h5></div>                    
                     </a>
@@ -24,9 +24,12 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="question-block hvr hvr-bounce-in" id="sponsors">                   
-                    <div class="col-md-12"><span class="flaticon flaticon-briefcase69"></span></div>
-                    <div class="col-md-12 text-lowercase"><h5>Вопросы <br> спонсорского <br>участия</h5></div>                    
+                
+                <div class="question-block hvr hvr-bounce-in" id="sponsors">
+                     <a href="https://nebesa.me/main/a_vie/content/adminpages/amazon.php#">
+                    <div class="col-md-12"><span class="flaticon flaticon-data-analytics"></span></div>
+                    <div class="col-md-12 text-lowercase"><h5>Анализ <br> продукции </h5></div>
+                     </a>
                 </div>
             </div>           
         </div>

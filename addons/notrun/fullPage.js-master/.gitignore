@@ -1,2 +1,11 @@
 .DS_Store
 bower_components/
+/.gitattributes
+/.gitignore
+/README.md
+/bower.json
+/jquery.fullPage.css
+/jquery.fullPage.js
+/jquery.fullPage.min.js
+/jquery.fullPage.scss
+/package.json

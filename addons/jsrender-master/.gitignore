@@ -4,3 +4,15 @@ bower_components
 test/browserify/bundles/*.js
 *.config
 Scripts
+/.gitattributes
+/.gitignore
+/MIT-LICENSE.txt
+/README.md
+/bower.json
+/gulpfile.js
+/index.js
+/jsrender-node.js
+/jsrender.js
+/jsrender.min.js
+/jsrender.min.js.map
+/package.json

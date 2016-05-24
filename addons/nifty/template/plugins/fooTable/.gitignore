@@ -1,0 +1,14 @@
+/.csslintrc
+/.gitattributes
+/.jshintrc
+/.travis.yml
+/Gruntfile.js
+/LICENSE
+/README.md
+/bower.json
+/component.json
+/composer.json
+/footable.jquery.json
+/package.json
+/screenshot.jpg
+/screenshot.pdn

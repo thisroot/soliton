@@ -5,3 +5,8 @@ docs
 *.diff
 *.patch
 .DS_Store
+/.gitignore
+/README.md
+/bower.json
+/jquery-tmpl.jquery.json
+/jquery.tmpl.js

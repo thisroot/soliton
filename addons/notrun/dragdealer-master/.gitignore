@@ -1,3 +1,11 @@
 node_modules
 sauce_connect.log*
 src/dragdealer.min.js
+/.gitignore
+/CHANGELOG.md
+/Gruntfile.js
+/LICENSE
+/README.md
+/bower.json
+/index.html
+/package.json

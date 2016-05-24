@@ -1,1 +1,5 @@
 bower_components
+/.gitignore
+/BigVideo.jquery.json
+/README.md
+/bower.json

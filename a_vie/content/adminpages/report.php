@@ -333,7 +333,8 @@ ini_set("memory_limit", "512M");
                             </div>
                             <input id="nameQuery" type="text" class="form-control" aria-label="...">
                         </div>
-                        <textarea style="float: left; width: 250px; height: 300px; margin:10px;" readonly id="query"></textarea>
+                        <textarea style="float: left; width: 250px; height: 150px; margin: 10px 90px 5px 0px;" readonly id="point"></textarea>
+                        <textarea style="float: left; width: 250px; height: 150px; margin: 5px 90px 10px 0px;" readonly id="query"></textarea>
                     </div>
                     <button class="btn btn-default" id="opener">Сохранить</button>
 
@@ -404,7 +405,7 @@ ini_set("memory_limit", "512M");
                     $(function () {
                         $("#mapcanvas").dialog({
                              
-                            
+                            title: 'Карта: ' + $('#city').val(),
                             width: width,
                             height: 500,
                             autoOpen: false,
@@ -425,7 +426,7 @@ ini_set("memory_limit", "512M");
                             var  circle, circleOptions, setCenter, marker;
 
                             $("#mapcanvas").dialog("open");
-                            
+                            var map, circle, circleOptions, setCenter, marker;
                             var geocoder = new google.maps.Geocoder(); //create geocoder object
                             // calling the geocode() function
                             geocoder.geocode({address: $('#city').val()}, function (results, status) {
@@ -435,14 +436,92 @@ ini_set("memory_limit", "512M");
                                     //create map to draw address location
                                     map = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
                                     // create the map point
-                                     marker = new google.maps.Marker({map: map, position: results[0].geometry.location});
+                                    // marker = new google.maps.Marker({map: map, position: results[0].geometry.location});
 
+                                setCenter = true;
+    
+                                circleOptions = {
+                                    fillColor:"#1E7490",
+                                    fillOpacity:0.5,
+                                    strokeColor:"#901E56",
+                                    strokeOpacity:0.8,
+                                    strokeWeight:2,
+                                    clickable:false
+                                };
+
+                                google.maps.event.addListener(map, 'click', function(event) {
+                                    if (setCenter) {
+                                        if (marker != undefined) {
+                                            marker.setMap(null);
+                                        }
+                                                    marker = new google.maps.Marker({
+                                                            position:event.latLng,
+                                                            clickable:false
+                                                    });
+                                                    marker.setMap(map);
+                                        circleOptions.center = event.latLng;
+                                        setCenter = false;
+                                    }
+                                    else {
+                                        //баАбббаИббаВаАаЕаМ баАбббаОбаНаИаЕ аМаЕаЖаДб баОбаКаАаМаИ
+                                        var radius = distHaversine(circleOptions.center, event.latLng);
+                                        circleOptions.edge = event.latLng;
+                                        circleOptions.radius = radius*1000;
+                                        if (circle != undefined) {
+                                            circle.setMap(null);
+                                        }
+                                        circle = new google.maps.Circle(circleOptions);
+                                        circle.setMap(map);
+                                        
+                                        setCenter = true;
+                                       $('#ui-id-2').text('');
+                                        var text = $('#city').val();
+                                        $('#ui-id-2').text(text + '. Радиус: '+ circleOptions.radius );
+                                        
+                                         var copy_circleOptions = JSON.parse(JSON.stringify(circleOptions)); 
+                                         //переводим значение замыкания в элемент массива
+                                         copy_circleOptions.edge.lat = circleOptions.edge.lat();
+                                         copy_circleOptions.edge.lng = circleOptions.edge.lng();
+                                         copy_circleOptions.center.lat = circleOptions.center.lat();
+                                         copy_circleOptions.center.lng = circleOptions.center.lng();
+
+                                            //delete some values which are functions
+                                            delete copy_circleOptions["fillColor"];
+                                            delete copy_circleOptions["fillOpacity"];
+                                            delete copy_circleOptions["strokeColor"];                                        
+                                            delete copy_circleOptions["strokeOpacity"];
+                                            delete copy_circleOptions["strokeWeight"];
+                                            delete copy_circleOptions["clickable"];
+                                            delete copy_circleOptions["visible"];
+                                            
+                                            $("#point").text(JSON.stringify(copy_circleOptions, undefined, 2));
+                                        
+                                        
+                                    }
+                                });
                                 }
-                            });
+                            });    
                         });
                     });
 
                 });
+                                
+                rad = function(x) {return x*Math.PI/180;};
+
+                    distHaversine = function(p1, p2) {
+                        var R = 6371; // earth's mean radius in km
+                        var dLat  = rad(p2.lat() - p1.lat());
+                        var dLong = rad(p2.lng() - p1.lng());
+
+                        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                                Math.cos(rad(p1.lat())) * Math.cos(rad(p2.lat())) * Math.sin(dLong/2) * Math.sin(dLong/2);
+                        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                        var d = R * c;
+
+                        return d.toFixed(3);
+                    };
+
+                
 
                 //сохранение значений формы на удаленный сервер            
                 $('#success').click(function (config) {

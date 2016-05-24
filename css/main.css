@@ -22,6 +22,11 @@
 
 body {
     font-family: 'Ubuntu', sans-serif !important;
+    font-size: 14px;
+}
+
+.navbar-header::before {
+    background-color: transparent;
 }
 
 /*colors */
@@ -50,6 +55,14 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 .btn-default {
@@ -440,7 +453,7 @@ input[readonly] {
     bottom: 20px;
   
     transition: all 0.55s ease 0s;
- //   background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+
 }
 
 

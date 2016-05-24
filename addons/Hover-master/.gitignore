@@ -17,3 +17,15 @@ node_modules
 .sass-cache
 
 .DS_Store
+/.gitignore
+/CONTRIBUTING.md
+/Gruntfile.js
+/HISTORY.md
+/README.md
+/bower.json
+/eager.jpg
+/hover.jpg
+/index.html
+/license.txt
+/logo-transparent.png
+/package.json

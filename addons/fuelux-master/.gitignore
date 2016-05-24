@@ -49,3 +49,21 @@ stage.sh
 
 # push major branch, the version tag, and SFTP upload to CDN
 publish.sh
+/.gitignore
+/BACKLOG.md
+/CNAME
+/DETAILS.md
+/Gruntfile.js
+/LICENSE
+/Procfile
+/README.md
+/bower.json
+/data.js
+/devserver.js
+/index.css
+/index.html
+/index.js
+/package.json
+/postinstall.js
+/sauce_browsers.yml
+/sauce_browsers_tricky.yml

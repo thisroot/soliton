@@ -1,1 +1,8 @@
 node_modules
+/.gitignore
+/HISTORY.md
+/LICENSE
+/README.md
+/bower.json
+/jquery.serialize-object.js
+/package.json

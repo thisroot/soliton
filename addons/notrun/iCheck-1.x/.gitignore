@@ -4,3 +4,10 @@ custom.styl
 custom.js
 .htaccess
 .git/
+/.gitignore
+/CHANGELOG.md
+/README.md
+/bower.json
+/icheck.jquery.json
+/icheck.js
+/icheck.min.js
